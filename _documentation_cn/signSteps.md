@@ -6,7 +6,7 @@ parameters:
 content:
 content_markdown: >-
 
-    以https://sapi.xt-uat.com/v4/order为例。
+    以https://sapi.x-uat.com/v4/order为例。
     
     
     以下是在linux bash环境下使用 echo openssl 和curl工具实现的一个调用接口下单的示例 appkey、secret仅供示范：
@@ -23,15 +23,15 @@ content_markdown: >-
 
     Header部分数据：
 
-        xt-validate-algorithms: HmacSHA256
+        x-validate-algorithms: HmacSHA256
     
-        xt-validate-appkey: 3976eb88-76d0-4f6e-a6b2-a57980770085
+        x-validate-appkey: 3976eb88-76d0-4f6e-a6b2-a57980770085
     
-        xt-validate-recvwindow: 5000
+        x-validate-recvwindow: 5000
     
-        xt-validate-timestamp: 1641446237201
+        x-validate-timestamp: 1641446237201
     
-        xt-validate-signature: 2b5eb11e18796d12d88f13dc27dbbd02c2cc51ff7059765ed9821957d82bb4d9
+        x-validate-signature: 2b5eb11e18796d12d88f13dc27dbbd02c2cc51ff7059765ed9821957d82bb4d9
 
 
 
@@ -131,7 +131,7 @@ content_markdown: >-
     2、请求头部分
         将key按照字母自然升序后，使用&方式拼接在一起，作为X。如：
 
-            xt-validate-algorithms=HmacSHA256&xt-validate-appkey=3976eb88-76d0-4f6e-a6b2-a57980770085&xt-validate-recvwindow=5000&xt-validate-timestamp=1641446237201
+            x-validate-algorithms=HmacSHA256&x-validate-appkey=3976eb88-76d0-4f6e-a6b2-a57980770085&x-validate-recvwindow=5000&x-validate-timestamp=1641446237201
 
 
 
@@ -143,25 +143,25 @@ content_markdown: >-
     
         signature=org.apache.commons.codec.digest.HmacUtils.hmacSha256Hex(secretkey, original);
     
-        将生成的签名singature放到请求头中，以xt-validate-signature为Key，以singature为值。
+        将生成的签名singature放到请求头中，以x-validate-signature为Key，以singature为值。
 
     4、样例
 
         签名原始报文样例：
 
-            xt-validate-algorithms=HmacSHA256&xt-validate-appkey=2063495b-85ec-41b3-a810-be84ceb78751&xt-validate-recvwindow=60000&xt-validate-timestamp=1666026215729#POST#/v4/order#{"symbol":"XT_USDT","side":"BUY","type":"LIMIT","timeInForce":"GTC","bizType":"SPOT","price":3,"quantity":2}
+            x-validate-algorithms=HmacSHA256&x-validate-appkey=2063495b-85ec-41b3-a810-be84ceb78751&x-validate-recvwindow=60000&x-validate-timestamp=1666026215729#POST#/v4/order#{"symbol":"X_USDT","side":"BUY","type":"LIMIT","timeInForce":"GTC","bizType":"SPOT","price":3,"quantity":2}
 
         请求报文样例：
       
-            curl --location --request POST 'https://sapi.xt.com/v4/order' 
+            curl --location --request POST 'https://sapi.x.com/v4/order' 
             --header 'accept: */*' 
             --header 'Content-Type: application/json' 
-            --header 'xt-validate-algorithms: HmacSHA256' 
-            --header 'xt-validate-appkey: 10c172ca-d791-4da5-91cd-e74d202dac96' 
-            --header 'xt-validate-recvwindow: 60000' 
-            --header 'xt-validate-timestamp: 1666026215729' 
-            --header 'xt-validate-signature: 4cb36e820f50d2e353e5e0a182dc4a955b1c26efcb4b513d81eec31dd36072ba' 
-            --data-raw '{"symbol":"XT_USDT","side":"BUY","type":"LIMIT","timeInForce":"GTC","bizType":"SPOT","price":3,"quantity":2}'
+            --header 'x-validate-algorithms: HmacSHA256' 
+            --header 'x-validate-appkey: 10c172ca-d791-4da5-91cd-e74d202dac96' 
+            --header 'x-validate-recvwindow: 60000' 
+            --header 'x-validate-timestamp: 1666026215729' 
+            --header 'x-validate-signature: 4cb36e820f50d2e353e5e0a182dc4a955b1c26efcb4b513d81eec31dd36072ba' 
+            --data-raw '{"symbol":"X_USDT","side":"BUY","type":"LIMIT","timeInForce":"GTC","bizType":"SPOT","price":3,"quantity":2}'
         
         注意事项：
             注意检查 Content-Type、签名原始报文中的参数格式、请求报文中的参数格式
