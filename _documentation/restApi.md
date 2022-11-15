@@ -7,7 +7,7 @@ parameters:
         content:
 content_markdown: |-
 
-    **production environment: https://sapi.xt.com**
+    **production environment: https://openapi.soeasyex.com**
     {: .info}
 
     Sdks for each language:

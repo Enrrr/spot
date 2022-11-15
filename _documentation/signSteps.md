@@ -6,7 +6,7 @@ parameters:
 content:
 content_markdown: >-
 
-    Take https://sapi.x-uat.com/v4/order as an example.
+    Take https://openapi.soeasyex.com/v4/order as an example.
     
     
     The following is an example appkey and secret for placing an order using a call interface implemented by echo openssl and curl tools in the linux bash environment for demonstration purposes only:
@@ -153,7 +153,7 @@ content_markdown: >-
 
         sample request message:
   
-            curl --location --request POST 'https://sapi.x.com/v4/order' 
+            curl --location --request POST 'https://openapi.soeasyex.com/v4/order' 
             --header 'accept: */*' 
             --header 'Content-Type: application/json' 
             --header 'x-validate-algorithms: HmacSHA256' 
