@@ -1,0 +1,10 @@
+diff a/_config.yml b/_config.yml	(rejected hunks)
+@@ -3,7 +3,7 @@
+ 
+ title: Soeasyex DOC
+ description: Soeasyex Interface documentation.
+-url: https://xt-com.github.io/xt4-api/
++url: https://enrrr.github.io/test-api/
+ google_analytics_key:
+ permalink: pretty
+ baseurl:
