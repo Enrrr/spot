@@ -1,6 +1,6 @@
 ---
 title: errorHtml7
-position_number: 6
+position_number: 7
 type: post
 split: '-------------------------------------'
 description: |
@@ -56,7 +56,7 @@ content_markdown: >-
     | viewName | &nbsp; | string | &nbsp; |
 
 
-    **响应示例**\:
+    &nbsp;
 left_code_blocks:
     -
         code_block:
