@@ -2,7 +2,7 @@
 title: 获取k线数据
 position_number: 4
 type: get
-split: -------------------------------------
+split: '-------------------------------------'
 description: /v4/public/kline
 parameters:
     -
@@ -42,12 +42,10 @@ parameters:
         default: '100'
         description: 限制数量
         ranges: 1~1000
-content_markdown: >-
+content_markdown: |-
     #### **限流规则**
 
     100/s/ip
-
-
 left_code_blocks:
     -
         code_block:
@@ -60,24 +58,24 @@ left_code_blocks:
 right_code_blocks:
     -
         code_block: |-
+            {
+              "rc": 0,
+              "mc": "string",
+              "ma": [
+                {}
+              ],
+              "result": [
                 {
-                  "rc": 0,
-                  "mc": "string",
-                  "ma": [
-                    {}
-                  ],
-                  "result": [
-                    {
-                      "t": 1662601014832,   //开盘时间(time)
-                      "o": "30000",         //开盘价(open)
-                      "c": "32000",         //收盘价(close)
-                      "h": "35000",         //最高价(high)
-                      "l": "25000",         //最低价(low)
-                      "q": "512",           //成交量(quantity)
-                      "v": "15360000"       //成交额(volume)
-                    }
-                  ]
+                  "t": 1662601014832,   //开盘时间(time)
+                  "o": "30000",         //开盘价(open)
+                  "c": "32000",         //收盘价(close)
+                  "h": "35000",         //最高价(high)
+                  "l": "25000",         //最低价(low)
+                  "q": "512",           //成交量(quantity)
+                  "v": "15360000"       //成交额(volume)
                 }
+              ]
+            }
         title: Response
         language: json
 ---

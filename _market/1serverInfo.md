@@ -1,7 +1,7 @@
 ---
-title: Get server time
+title: Get server time1
 position_number: 1
-type: get 
+type: get
 description: /v4/public/time
 parameters:
     -
@@ -28,14 +28,14 @@ left_code_blocks:
 right_code_blocks:
     -
         code_block: |-
-                {
-                  "rc": 0,
-                  "mc": "SUCCESS",
-                  "ma": [],
-                  "result": {
-                    "serverTime": 1662435658062  
-                  }
-                }
+            {
+              "rc": 0,
+              "mc": "SUCCESS",
+              "ma": [],
+              "result": {
+                "serverTime": 1662435658062  
+              }
+            }
         title: Response
         language: json
 ---
