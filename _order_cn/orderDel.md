@@ -4,7 +4,7 @@ position_number: 3
 type: post
 split: '-------------------------------------'
 description: |
-    接口地址:/v1/order/cancel  <br>请求数据类型:application/x-www-form-urlencoded
+    接口地址:/v1/order/cancel   请求数据类型:application/x-www-form-urlencoded
 parameters:
     -
         name: orderId
