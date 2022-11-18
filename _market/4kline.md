@@ -2,7 +2,7 @@
 title: Get K-line data
 position_number: 4
 type: get
-split: -------------------------------------
+split: '-------------------------------------'
 description: /v4/public/kline
 parameters:
     -
@@ -42,11 +42,10 @@ parameters:
         default: '100'
         description:
         ranges: 1~1000
-content_markdown: >-
+content_markdown: |-
     #### **Limit Flow Rules**
-    
-    100/s/ip
 
+    100/s/ip
 left_code_blocks:
     -
         code_block:
@@ -59,24 +58,24 @@ left_code_blocks:
 right_code_blocks:
     -
         code_block: |-
+            {
+              "rc": 0,
+              "mc": "string",
+              "ma": [
+                {}
+              ],
+              "result": [
                 {
-                  "rc": 0,
-                  "mc": "string",
-                  "ma": [
-                    {}
-                  ],
-                  "result": [
-                    {
-                      "t": 1662601014832,   //open time
-                      "o": "30000",         //open price
-                      "c": "32000",         //close price
-                      "h": "35000",         //highest price
-                      "l": "25000",         //lowest price
-                      "q": "512",           //transaction quantity
-                      "v": "15360000"       //transaction volume
-                    }
-                  ]
+                  "t": 1662601014832,   //open time
+                  "o": "30000",         //open price
+                  "c": "32000",         //close price
+                  "h": "35000",         //highest price
+                  "l": "25000",         //lowest price
+                  "q": "512",           //transaction quantity
+                  "v": "15360000"       //transaction volume
                 }
+              ]
+            }
         title: Response
         language: json
 ---
