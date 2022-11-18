@@ -1,7 +1,7 @@
 ---
 title: 单笔撤单
 position_number: 3
-type: delete
+type: post
 split: '-------------------------------------'
 description: /v1/order/cancel
 parameters:
