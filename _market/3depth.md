@@ -3,7 +3,7 @@ title: Get depth data
 position_number: 3
 type: get
 split: '-------------------------------------'
-description: /v4/public/depth
+description: /v1/public/depth
 parameters:
     -
         name: symbol
