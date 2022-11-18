@@ -2,7 +2,7 @@
 title: 获取深度数据
 position_number: 3
 type: get
-split: -------------------------------------
+split: '-------------------------------------'
 description: /v4/public/depth
 parameters:
     -
@@ -19,13 +19,10 @@ parameters:
         default: '50'
         description: 数量
         ranges: 1~500
-content_markdown: >-
+content_markdown: |-
     #### **限流规则**
 
     200/s/ip
-
-
-
 left_code_blocks:
     -
         code_block: |-
@@ -42,30 +39,30 @@ left_code_blocks:
 right_code_blocks:
     -
         code_block: |-
-                {
-                  "rc": 0,
-                  "mc": "SUCCESS",
-                  "ma": [],
-                  "result": {
-                    "timestamp": 1662445330524,          //时间戳
-                    "lastUpdateId": 137333589606963580,  //最后更新记录
-                    "bids": [                            //买盘([?][0]=价位;[?][1]=挂单量)
-                      [
-                        "200.0000",                      //价位
-                        "0.996000"                       //挂单量
-                      ],
-                      [
-                        "100.0000",
-                        "0.001000"
-                      ],
-                      [
-                        "20.0000",
-                        "10.000000"
-                      ]
-                    ],
-                    "asks": []                          //卖盘([?][0]=价位;[?][1]=挂单量)
-                  }
-                }
+            {
+              "rc": 0,
+              "mc": "SUCCESS",
+              "ma": [],
+              "result": {
+                "timestamp": 1662445330524,          //时间戳
+                "lastUpdateId": 137333589606963580,  //最后更新记录
+                "bids": [                            //买盘([?][0]=价位;[?][1]=挂单量)
+                  [
+                    "200.0000",                      //价位
+                    "0.996000"                       //挂单量
+                  ],
+                  [
+                    "100.0000",
+                    "0.001000"
+                  ],
+                  [
+                    "20.0000",
+                    "10.000000"
+                  ]
+                ],
+                "asks": []                          //卖盘([?][0]=价位;[?][1]=挂单量)
+              }
+            }
         title: Response
         language: json
 ---

@@ -4,12 +4,6 @@ position_number: 2
 parameters:
     -
         name:
-    -
-        name:
-    -
-        name:
-    -
-        name:
 content:
 content_markdown: |-
     鉴于延迟高和稳定性差等原因，不建议通过代理的方式访问API。
@@ -20,10 +14,6 @@ content_markdown: |-
 
     对于/public以外开头的请求，需要对请求报文进行签名
 left_code_blocks:
-    -
-        code_block:
-        title:
-        language:
     -
         code_block:
         title:

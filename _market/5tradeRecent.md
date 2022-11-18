@@ -16,13 +16,12 @@ parameters:
         type: number
         mandatory: false
         default: '200'
-        description: 
+        description:
         ranges: 1，1000
-content_markdown: >-
+content_markdown: |-
     #### **Limit Flow Rules**
-    
-    100/s/ip
 
+    100/s/ip
 left_code_blocks:
     -
         code_block: |-
@@ -39,23 +38,23 @@ left_code_blocks:
 right_code_blocks:
     -
         code_block: |-
+            {
+              "rc": 0,
+              "mc": "string",
+              "ma": [
+                {}
+              ],
+              "result": [
                 {
-                  "rc": 0,
-                  "mc": "string",
-                  "ma": [
-                    {}
-                  ],
-                  "result": [
-                    {
-                      "i": 0,           //ID
-                      "t": 0,           //transaction time
-                      "p": "string",    //transaction price
-                      "q": "string",    //transaction quantity
-                      "v": "string",    //transaction volume
-                      "b": true         //buyerMaker
-                    }
-                  ]
+                  "i": 0,           //ID
+                  "t": 0,           //transaction time
+                  "p": "string",    //transaction price
+                  "q": "string",    //transaction quantity
+                  "v": "string",    //transaction volume
+                  "b": true         //buyerMaker
                 }
+              ]
+            }
         title: Response
         language: json
 ---
