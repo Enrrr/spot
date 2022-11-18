@@ -3,7 +3,9 @@ title: 撤销订单
 position_number: 3
 type: post
 split: '-------------------------------------'
-description: /v1/order/cancel
+description: |
+    接口地址:/v1/order/cancel
+    请求数据类型:application/x-www-form-urlencoded
 parameters:
     -
         name: orderId
