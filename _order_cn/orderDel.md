@@ -1,10 +1,10 @@
 ---
-title: 撤销订单
-position_number: 3
+title: 批量下单
+position_number: 1
 type: post
 split: '-------------------------------------'
 description: |
-    接口地址:/v1/order/cancel  <br>请求数据类型:application/x-www-form-urlencoded
+    接口地址:/v1/trade/order/batchOrder <br>请求数据类型:application/x-www-form-urlencoded
 parameters:
     -
         name: orderId
@@ -18,13 +18,13 @@ content_markdown: |-
 
     | 参数名称 | 参数说明 | 请求类型 | 是否必须 | 数据类型 | schema |
     | --- | --- | --- | --- | --- | --- |
-    | orderId | 订单Id | query | true | integer(int64) | &nbsp; |
+    | list | list | query | true | string | &nbsp; |
 
     **响应状态**\:
 
     | 状态码 | 说明 | schema |
     | --- | --- | --- |
-    | 200 | OK | CommonResponse&laquo;object&raquo; |
+    | 200 | OK | CommonResponse&laquo;boolean&raquo; |
     | 201 | Created | &nbsp; |
     | 401 | Unauthorized | &nbsp; |
     | 403 | Forbidden | &nbsp; |
@@ -34,12 +34,11 @@ content_markdown: |-
 
     | 参数名称 | 参数说明 | 类型 | schema |
     | --- | --- | --- | --- |
-    | error | &nbsp; | ErrorMessage | ErrorMessage |
-    | code | &nbsp; | string | &nbsp; |
+    | code | &nbsp; | integer(int32) | integer(int32) |
+    | data | &nbsp; | boolean | &nbsp; |
     | msg | &nbsp; | string | &nbsp; |
-    | msgInfo | &nbsp; | string | &nbsp; |
-    | result | &nbsp; | object | &nbsp; |
-    | returnCode | &nbsp; | integer(int32) | integer(int32) |
+
+    &nbsp;
 left_code_blocks:
     -
         code_block:
@@ -47,7 +46,7 @@ left_code_blocks:
         language: python
 right_code_blocks:
     -
-        code_block: "\r\n{\r\n\t\"error\": {\r\n\t\t\"code\": \"\",\r\n\t\t\"msg\": \"\"\r\n\t},\r\n\t\"msgInfo\": \"\",\r\n\t\"result\": {},\r\n\t\"returnCode\": 0\r\n}\r\n"
+        code_block: "{\n\t\"code\": 0,\n\t\"data\": true,\n\t\"msg\": \"\"\n}\n"
         title: Response
         language: javascript
 ---
