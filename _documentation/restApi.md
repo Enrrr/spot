@@ -6,18 +6,12 @@ parameters:
         name:
         content:
 content_markdown: |-
-
-    **生产环境: https://openapi.soeasyex.com**
+    **production environment: https://openapi.soeasyex.com**
     {: .info}
 
-    各个语言的sdk：
-        
+    Sdks for each language:
 
-    
-    各个接口的请求信息样例
-        
- 
-
+    Sample request information for each interface：
 left_code_blocks:
     -
         code_block:
