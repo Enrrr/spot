@@ -7,7 +7,7 @@ parameters:
         content:
 content_markdown: |-
 
-    **生产环境: https://openapi.soeasyex.com**
+    **生产环境: https://openapi.soeasyex.com/spot/**
     {: .info}
 
     各个语言的sdk：
