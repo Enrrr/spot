@@ -89,7 +89,7 @@ content_markdown: >-
 
     ```
 
-    /v4/order
+    /v1/trade/order/create
 
 
     上述拼接值记作为path
@@ -117,13 +117,13 @@ content_markdown: >-
 
     x-www-form-urlencoded:
 
-        symbol=btc_usdt&side=BUY&type=LIMIT&timeInForce=GTC&quantity=1&price=0.1
+        symbol=btc_usdt&direction=BUY&amount=1&price=0.1
 
         上述值拼接记作body
 
     json:
 
-        {"symbol":"btc_usdt","side":"BUY","type":"LIMIT","timeInForce":"GTC","quantity":2,"price":39000}
+        {"symbol":"btc_usdt","direction":"BUY","amount":2,"price":39000}
 
         上述值拼接记作body
     ```
@@ -135,11 +135,11 @@ content_markdown: >-
     ```
 
     query:
-        symbol=btc_usdt&side=BUY&type=LIMIT
+        symbol=btc_usdt&direction=BUY
         上述拼接值记作query
 
     body:
-        {"symbol":"btc_usdt","side":BUY,"type":"LIMIT"}
+        {"symbol":"btc_usdt","direction":BUY}
         上述拼接值记作body
     ```
 
@@ -165,7 +165,7 @@ content_markdown: >-
 
 
     ```
-        x-validate-algorithms=HmacSHA256&x-validate-appkey=3976eb88-76d0-4f6e-a6b2-a57980770085&x-validate-recvwindow=5000&x-validate-timestamp=1641446237201
+        x_algorithms=HmacSHA256&x_access_key=3976eb88-76d0-4f6e-a6b2-a57980770085&x_recvwindow=5000&x_timestamp=1641446237201
     ```
 
 
@@ -184,7 +184,7 @@ content_markdown: >-
     original);
 
 
-    将生成的签名singature放到请求头中，以x-validate-signature为Key，以singature为值。
+    将生成的签名singature放到请求头中，以x_signature为Key，以singature为值。
 
     ```
 
@@ -196,19 +196,19 @@ content_markdown: >-
 
     签名原始报文样例：
 
-        x-validate-algorithms=HmacSHA256&x-validate-appkey=2063495b-85ec-41b3-a810-be84ceb78751&x-validate-recvwindow=60000&x-validate-timestamp=1666026215729#POST#/v4/order#{"symbol":"X_USDT","side":"BUY","type":"LIMIT","timeInForce":"GTC","bizType":"SPOT","price":3,"quantity":2}
+        x_algorithms=HmacSHA256&x_access_key=2063495b-85ec-41b3-a810-be84ceb78751&x_recvwindow=60000&x_timestamp=1666026215729#POST#/v1/trade/order/create#{"symbol":"BTC_USDT","direction":"BUY","orderType":"LIMIT","price":3,"amount":2}
 
     请求报文样例：
 
-        curl --location --request POST 'https://openapi.soeasyex.com/v4/order'
+        curl --location --request POST 'https://openapi.soeasyex.com/v1/trade/order/create'
         --header 'accept: */*'
         --header 'Content-Type: application/json'
-        --header 'x-validate-algorithms: HmacSHA256'
-        --header 'x-validate-appkey: 10c172ca-d791-4da5-91cd-e74d202dac96'
-        --header 'x-validate-recvwindow: 60000'
-        --header 'x-validate-timestamp: 1666026215729'
-        --header 'x-validate-signature: 4cb36e820f50d2e353e5e0a182dc4a955b1c26efcb4b513d81eec31dd36072ba'
-        --data-raw '{"symbol":"X_USDT","side":"BUY","type":"LIMIT","timeInForce":"GTC","bizType":"SPOT","price":3,"quantity":2}'
+        --header 'x_algorithms: HmacSHA256'
+        --header 'x_access_key: 10c172ca-d791-4da5-91cd-e74d202dac96'
+        --header 'x_recvwindow: 60000'
+        --header 'x_timestamp: 1666026215729'
+        --header 'x_signature: 4cb36e820f50d2e353e5e0a182dc4a955b1c26efcb4b513d81eec31dd36072ba'
+        --data-raw '{"symbol":"BTC_USDT","direction":"BUY","orderType":"LIMIT","price":3,"amount":2}'
 
     注意事项：
         注意检查 Content-Type、签名原始报文中的参数格式、请求报文中的参数格式
