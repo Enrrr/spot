@@ -1,5 +1,5 @@
 ---
-title: getCoinAddress
+title: 获取充值地址
 position_number: 1
 type: get
 split: '-------------------------------------'
@@ -10,7 +10,7 @@ content_markdown: |-
 
     | 参数名称 | 参数说明 | 请求类型 | 是否必须 | 数据类型 | schema |
     | --- | --- | --- | --- | --- | --- |
-    | coinType | coinType | query | true | string | BTC |
+    | coinType | 币种 | query | true | string | &nbsp; |
 
     **响应状态**\:
 
