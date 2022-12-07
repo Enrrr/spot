@@ -10,9 +10,9 @@ content_markdown: |-
 
     | 参数名称 | 参数说明 | 请求类型 | 是否必须 | 数据类型 | schema |
     | --- | --- | --- | --- | --- | --- |
-    | interval | 时间间隔 | query | true | string | &nbsp; |
-    | symbol | 交易对 | query | true | string | &nbsp; |
-    | endTime | 结束时间 | query | false | integer(int64) | &nbsp; |
+    | interval | 时间间隔(10000,单位是毫秒) | query | true | string | &nbsp; |
+    | symbol | 交易对(BTC\_USDT) | query | true | string | &nbsp; |
+    | endTime | 结束时间(时间戳) | query | false | integer(int64) | &nbsp; |
     | limit | 限制条数 | query | false | integer(int32) | &nbsp; |
     | startTime | 起始时间 | query | false | integer(int64) | &nbsp; |
 

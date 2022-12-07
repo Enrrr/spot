@@ -10,7 +10,7 @@ content_markdown: |-
 
     | 参数名称 | 参数说明 | 请求类型 | 是否必须 | 数据类型 | schema |
     | --- | --- | --- | --- | --- | --- |
-    | coinType | coinType | query | true | string | &nbsp; |
+    | coinType | coinType | query | true | string | BTC |
 
     **响应状态**\:
 
