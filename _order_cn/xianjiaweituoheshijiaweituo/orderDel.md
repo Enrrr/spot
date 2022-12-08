@@ -16,7 +16,7 @@ content_markdown: >-
     | list | 参数组 | query | true | string | &nbsp; |
 
 
-    list示例\[\{"symbol":"BTC\_USDT","price":1234,"totalAmount":10,"tradeType":"LIMIT","direction":"BUY"\},\{"symbol":"BTC\_USDT","price":1234,"totalAmount":10,"tradeType":"LIMIT","direction":"BUY"\}\]
+    list示例\[\{"isCreate":"true","symbol":"BTC\_USDT","price":1234,"totalAmount":10,"tradeType":"LIMIT","direction":"BUY"\},\{"isCreate":"true","symbol":"BTC\_USDT","price":1234,"totalAmount":10,"tradeType":"LIMIT","direction":"BUY"\}\]
 
 
     symbol=交易对,price=价格,totalAmount=数量,totalAmount=交易类型(LIMIT限价,MARKET市价),direction=交易方向(BUY,SELL)
